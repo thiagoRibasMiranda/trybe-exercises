@@ -66,7 +66,7 @@ if (h > 0) {
     console.log('Erro: ângulo inválido');
   };
 
-  // Requisito 6
+// Requisito 6
 
   let peca = 'rainha';
 
@@ -92,4 +92,24 @@ if (h > 0) {
     default:
       console.log('Erro: Peça inválida');
       break;
+  }
+
+//Requisito 7
+
+  let nota = 35;
+
+  if (nota > 100 || nota < 0) {
+    console.log('Erro: nota inválida!')
+  }  else if (nota >= 90) {
+    console.log('A');
+  } else if (nota >= 80) {
+    console.log('B');
+  } else if (nota >= 70) {
+    console.log('C');
+  } else if (nota >= 60) {
+    console.log('D');
+  } else if (nota >= 50) {
+    console.log('E');
+  } else {
+    console.log('F');
   }
