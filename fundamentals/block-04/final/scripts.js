@@ -137,3 +137,15 @@ if (o % 2 !== 0 || p % 2 !== 0 || r % 2 !== 0) {
 } else {
   console.log('false');
 }
+// Requisito 10
+
+let custo = 150
+let precoVenda = 600
+
+if (custo <= 0 || precoVenda <= 0) {
+  console.log('Erro: valor inválido')
+} else {
+  let valorCustoTotal = custo * 1.20;
+  let lucro = (precoVenda - valorCustoTotal) * 1000;
+  console.log(lucro);
+}
