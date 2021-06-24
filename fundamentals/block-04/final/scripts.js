@@ -114,5 +114,26 @@ if (h > 0) {
     console.log('F');
   }
 
-//Requisito 8
+// Requisito 8
 
+let l = 12
+let m = 13
+let n = 14
+
+if (l % 2 === 0 || m % 2 === 0 || n % 2 === 0) {
+  console.log('true');
+} else {
+  console.log('false');
+}
+
+// Requisito 9
+
+let o = 15
+let p = 16
+let r = 18
+
+if (o % 2 !== 0 || p % 2 !== 0 || r % 2 !== 0) {
+  console.log('true');
+} else {
+  console.log('false');
+}
