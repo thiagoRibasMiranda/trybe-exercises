@@ -3,11 +3,11 @@
 let a = 1;
 let b =2;
 
-console.log("Soma: " + (a+b));
-console.log("Subtração: " + (a-b));
-console.log("Multiplicação: " + (a*b));
-console.log("Divisão: " + (a/b));
-console.log("Módulo: " + (a%b));
+console.log('Soma: ' + (a+b));
+console.log('Subtração: ' + (a-b));
+console.log('Multiplicação: ' + (a*b));
+console.log('Divisão: ' + (a/b));
+console.log('Módulo: ' + (a%b));
 
 // Requisito 2
 
@@ -32,4 +32,16 @@ if (e > f && e > g) {
   console.log('O maior número é: ' + f + ' (f)');
 } else {
   console.log('O maior número é: ' + g + ' (g)');
+}
+
+// Requisito 4
+
+let h = 8;
+
+if (h > 0) {
+  console.log('positive');
+} else if (h < 0) {
+  console.log('negative');
+} else {
+  console.log('zero');
 }
