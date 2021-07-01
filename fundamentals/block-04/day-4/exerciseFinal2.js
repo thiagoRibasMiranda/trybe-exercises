@@ -39,21 +39,28 @@
 //   } return  maiorNome;
 // } console.log(nomeMaior(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
 
-function maisRepete(array) {
-  let cont = 0;
-  let contRepetido = 0;
-  let indexNumeroRepetido = 0; 
-  for (let index = 0; index < array.length; index += 1) {
-    for (let index2 = 0; index2 < array.length; index2 +=1) {
-      if (array[index] === array[index2]) {
-        cont += 1;
-      }
-    }
-    if (cont > contRepetido) {
-      contRepetido = cont;
-      indexNumeroRepetido = index;      
-    }
-    cont = 0;
-  }
-  return array[indexNumeroRepetido];
-} console.log(maisRepete([2, 3, 2, 5, 8, 2, 3]));
+// function maisRepete(array) {
+//   let cont = 0;
+//   let contRepetido = 0;
+//   let indexNumeroRepetido = 0; 
+//   for (let index = 0; index < array.length; index += 1) {
+//     for (let index2 = 0; index2 < array.length; index2 +=1) {
+//       if (array[index] === array[index2]) {
+//         cont += 1;
+//       }
+//     }
+//     if (cont > contRepetido) {
+//       contRepetido = cont;
+//       indexNumeroRepetido = index;      
+//     }
+//     cont = 0;
+//   }
+//   return array[indexNumeroRepetido];
+// } console.log(maisRepete([2, 3, 2, 5, 8, 2, 3]));
+
+function somatorio(n) {
+  somaTotal = 0;
+  for(let i = 0; i <= n; i += 1) {
+    somaTotal = somaTotal + i;
+  } return somaTotal
+} console.log(somatorio(5));
