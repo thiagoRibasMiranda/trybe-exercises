@@ -9,3 +9,4 @@ title2.innerText = 'Joker'
 
 const paragraph2 = document.getElementById('second-paragraph');
 paragraph2.style.color = "purple";
+paragraph2.style.fontSize = '15px';
