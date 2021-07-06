@@ -49,3 +49,5 @@ h1.classList.add('title');
 // 2. Adicione a classe description nas 3 tags h3 criadas;
 let h3AddClass = document.querySelectorAll('h3');
 h3AddClass.classList.add('description');
+// 3. Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild();
+mainContent.removeChild(leftContent);
