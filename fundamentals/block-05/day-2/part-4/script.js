@@ -53,3 +53,6 @@ h3AddClass.classList.add('description');
 mainContent.removeChild(leftContent);
 // 4. Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
 rightContent.style.marginRight = 'auto';
+// 5.Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+const divCenterContent = document.querySelector('.center-content');
+divCenterContent.parentNode.style.backgroundColor = 'green';
