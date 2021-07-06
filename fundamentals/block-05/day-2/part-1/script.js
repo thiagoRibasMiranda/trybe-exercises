@@ -12,3 +12,6 @@ const primeiroFilho = pai.firstElementChild;
 const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
 // 6. Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
 let texto = elementoOndeVoceEsta.nextSibling;
+//texto1.innerText = '123';
+// 7. Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
