@@ -8,3 +8,5 @@ const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
 primeiroFilhoDoFilho.innerText = 'Texto';
 // 4. Acesse o primeiroFilho a partir de pai .
 const primeiroFilho = pai.firstElementChild;
+// 5 .Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
+const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
