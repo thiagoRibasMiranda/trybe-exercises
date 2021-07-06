@@ -45,4 +45,7 @@ for (let index = 1; index <= 3; index += 1) {
 // Parte 2
 
 // 1. Adicione a classe title na tag h1 criada;
-h1.classList.add('title')
+h1.classList.add('title');
+// 2. Adicione a classe description nas 3 tags h3 criadas;
+let h3AddClass = document.querySelectorAll('h3');
+h3AddClass.classList.add('description');
