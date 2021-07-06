@@ -14,3 +14,7 @@ mainContent.appendChild(centerContent);
 let paragraph = document.createElement('p');
 paragraph.innerText = 'Algum Texto';
 centerContent.appendChild(paragraph);
+// 5. Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+let leftContent = document.createElement('div');
+leftContent.classList.add('left-content');
+mainContent.appendChild(leftContent);
