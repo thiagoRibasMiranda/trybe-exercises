@@ -42,3 +42,7 @@ for (let index = 1; index <= 3; index += 1) {
     h3.innerText = index;
     mainContent.appendChild(h3);
 }
+// Parte 2
+
+// 1. Adicione a classe title na tag h1 criada;
+h1.classList.add('title')
