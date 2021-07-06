@@ -10,3 +10,7 @@ document.body.appendChild(mainContent);
 let centerContent = document.createElement('div');
 centerContent.classList.add('center-content');
 mainContent.appendChild(centerContent);
+// 4. Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+let paragraph = document.createElement('p');
+paragraph.innerText = 'Algum Texto';
+centerContent.appendChild(paragraph);
