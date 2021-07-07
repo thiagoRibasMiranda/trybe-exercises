@@ -4,20 +4,18 @@ const thirdDiv = document.getElementById('third-div');
 const input = document.getElementById('input');
 const myWebpage = document.getElementById('my-spotrybefy');
 
-/*
- Copie esse arquivo e edite apenas ele;
- Crie uma função que adicione a classe 'tech' ao elemento selecionado;
-1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
- Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
-com a classe 'tech';
- Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
-redirecione para alguma página;
-1. Que tal redirecionar para seu portifólio?
- Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
-a cor do mesmo;
+// 2. Crie uma função que adicione a classe 'tech' ao elemento selecionado;
+// 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
+function addClassTech(event) {
+    let elemento = document.querySelector('.tech');
+    elemento.classList.remove('tech');
+    event.target.classList.add('tech');
+    input.value = '';
+}
 
-Segue abaixo um exemplo do uso de event.target:
-*/
+firstDiv.addEventListener('click', addClassTech);
+secondDiv.addEventListener('click', addClassTech);
+thirdDiv.addEventListener('click', addClassTech);
 
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
