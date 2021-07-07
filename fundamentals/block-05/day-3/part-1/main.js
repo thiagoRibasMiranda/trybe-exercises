@@ -26,7 +26,13 @@ function textModf(event) {
   let texto = event.target.value;
   techElement.innerText = texto;
 }
-
+// 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
+// redirecione para alguma página;
+// 4.1. Que tal redirecionar para seu portifólio?
+myWebpage.addEventListener('dblclick', myGit);
+function myGit(event) {
+  window.location.replace('https://github.com/');
+}
 
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
