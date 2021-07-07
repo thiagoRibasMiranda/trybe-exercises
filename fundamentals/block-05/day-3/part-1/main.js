@@ -6,16 +6,21 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento selecionado;
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-function addClassTech(event) {
-    let elemento = document.querySelector('.tech');
-    elemento.classList.remove('tech');
-    event.target.classList.add('tech');
-    input.value = '';
-}
-
 firstDiv.addEventListener('click', addClassTech);
 secondDiv.addEventListener('click', addClassTech);
 thirdDiv.addEventListener('click', addClassTech);
+
+function addClassTech(event) {
+    let techElement = document.getElementsByClassName('tech')[0];
+    techElement.classList.remove('tech');
+    event.target.classList.add('tech');
+    // input.value = '';    
+}
+
+
+// 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
+// com a classe 'tech';
+
 
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
