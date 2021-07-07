@@ -11,7 +11,7 @@ secondDiv.addEventListener('click', addClassTech);
 thirdDiv.addEventListener('click', addClassTech);
 
 function addClassTech(event) {
-    let techElement = document.getElementsByClassName('tech')[0];
+    const techElement = document.getElementsByClassName('tech')[0];
     techElement.classList.remove('tech');
     event.target.classList.add('tech');
     // input.value = '';    
@@ -20,6 +20,12 @@ function addClassTech(event) {
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
+input.addEventListener('input',textModf);
+function textModf(event) {
+  const techElement = document.getElementsByClassName('tech')[0];
+  let texto = event.target.value;
+  techElement.innerText = texto;
+}
 
 
 function resetText(event) {
