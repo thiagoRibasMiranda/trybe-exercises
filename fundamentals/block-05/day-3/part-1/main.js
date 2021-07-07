@@ -33,6 +33,17 @@ myWebpage.addEventListener('dblclick', myGit);
 function myGit(event) {
   window.location.replace('https://github.com/');
 }
+// 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
+// a cor do mesmo;
+myWebpage.addEventListener('mouseover', changeColor);
+function changeColor(event) {
+  event.target.style.color = 'purple';
+}
+myWebpage.addEventListener('mouseout', backColor);
+function backColor(event) {
+  event.target.style.color = 'unset';
+}
+
 
 function resetText(event) {
   // O Event é passado como um parâmetro para a função.
