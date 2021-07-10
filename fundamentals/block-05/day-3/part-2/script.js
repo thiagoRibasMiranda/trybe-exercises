@@ -46,8 +46,11 @@ function createButton(event) {
 }
 createButton('Feriados');
 
-// document.querySelector('#btn-holiday').addEventListener('click', changeColorButton);
-// function changeColorButton(event) {
-//   document.querySelector('.holiday').innerText = 'red';
-// }
+document.querySelector('#btn-holiday').addEventListener('click', changeColorButton);
+function changeColorButton(event) {
+  let daysHoliday = document.querySelectorAll('.holiday');
+  for (let index = 0; index < daysHoliday.length; index += 1) {
+    daysHoliday[index].classList.toggle('holiday-background');
+    } 
+}
 
