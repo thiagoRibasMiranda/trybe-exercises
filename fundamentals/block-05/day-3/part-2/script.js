@@ -25,9 +25,9 @@ function createDaysOfMonth() {
     dayMonthListItem.className = 'day';
 
     if (daysMonth === 24 || daysMonth === 25 || daysMonth === 31) {
-      dayMonthListItem.className = 'holiday';
+      dayMonthListItem.classList.add('holiday');
     } if (daysMonth === 4 || daysMonth === 11 || daysMonth === 18 || daysMonth === 25) {
-      dayMonthListItem.className = 'friday';
+      dayMonthListItem.classList.add('friday');
     }
 
 
@@ -45,3 +45,9 @@ function createButton(event) {
   divButtons.appendChild(botao);
 }
 createButton('Feriados');
+
+// document.querySelector('#btn-holiday').addEventListener('click', changeColorButton);
+// function changeColorButton(event) {
+//   document.querySelector('.holiday').innerText = 'red';
+// }
+
