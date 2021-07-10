@@ -54,3 +54,12 @@ function changeColorButton(event) {
     } 
 }
 
+
+function createButtonFriday(event) {
+  let botaoSexta = document.createElement('button');
+  botaoSexta.id = "btn-friday";
+  botaoSexta.innerText = event;
+  divButtons.appendChild(botaoSexta);
+}
+createButtonFriday('Sexta-feira');
+
