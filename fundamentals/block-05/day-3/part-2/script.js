@@ -63,3 +63,17 @@ function createButtonFriday(event) {
 }
 createButtonFriday('Sexta-feira');
 
+document.getElementById('btn-friday').addEventListener('click', modifyTextFriday)
+function modifyTextFriday(event) {
+  let friday = document.querySelectorAll('.friday');
+  for (let index = 0; index < friday.length; index += 1) {
+    let element = friday[index];
+    if (element.innerText != 'Mufasa') {
+      element.innerText = 'Mufasa';
+    } else {
+      element.innerText = event[index];
+    }    
+  }
+}
+let dezFridays = [ 4, 11, 18, 25 ];
+modifyTextFriday(dezFridays);
