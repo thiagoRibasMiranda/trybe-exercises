@@ -11,3 +11,7 @@ document.getElementById('button3').addEventListener('click', changeFontSize);
 function changeFontSize(event) {
 	divContainerMain.classList.toggle('font-size');
 }
+document.getElementById('button4').addEventListener('click', changeLineHeight)
+function changeLineHeight(event) {
+	divContainerMain.classList.toggle('line-height');
+}
