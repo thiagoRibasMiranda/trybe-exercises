@@ -1,0 +1,21 @@
+.pink{
+  background-color: #cb4e4e;
+}
+.white{
+  color: white;
+}
+.button {
+  box-shadow: 0 2px #ab3c3c;
+  border: none;
+}
+
+.font-size {
+  font-size: 18px;
+}
+
+.line-height{
+  line-height: 180%;
+}
+.font-family{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
