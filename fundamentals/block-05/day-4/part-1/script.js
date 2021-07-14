@@ -15,3 +15,7 @@ document.getElementById('button4').addEventListener('click', changeLineHeight)
 function changeLineHeight(event) {
 	divContainerMain.classList.toggle('line-height');
 }
+document.getElementById('button5').addEventListener('click', changeFontFamily)
+function changeFontFamily(event) {
+	divContainerMain.classList.toggle('font-family');
+}
