@@ -7,3 +7,7 @@ document.getElementById('button2').addEventListener('click', changeColorText);
 function changeColorText(event) {
 	divContainerMain.classList.toggle('white');
 }
+document.getElementById('button3').addEventListener('click', changeFontSize);
+function changeFontSize(event) {
+	divContainerMain.classList.toggle('font-size');
+}

@@ -6,12 +6,16 @@
 }
 .button1 {
   box-shadow: 0 2px #ab3c3c;
-  color: white;
   border: none;
 }
 .button2 {
   box-shadow: 0 2px #ab3c3c;
-  color: white;
   border: none;
-  background-color: #cb4e4e;
+}
+.font-size {
+  font-size: 18px;
+}
+.button3 {
+  box-shadow: 0 2px #ab3c3c;
+  border: none;
 }
