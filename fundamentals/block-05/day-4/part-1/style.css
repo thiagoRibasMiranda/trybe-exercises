@@ -1,8 +1,17 @@
 .pink{
   background-color: #cb4e4e;
 }
+.white{
+  color: white;
+}
 .button1 {
   box-shadow: 0 2px #ab3c3c;
   color: white;
   border: none;
+}
+.button2 {
+  box-shadow: 0 2px #ab3c3c;
+  color: white;
+  border: none;
+  background-color: #cb4e4e;
 }
