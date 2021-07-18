@@ -7,3 +7,18 @@ for (let index = 0; index < stateOptions.length; index += 1) {
     element.value = stateOptions[index];
     states.appendChild(element);    
 }
+
+function handleSubmit(event) {
+    event.preventDefault();
+    //validar os dados
+    let name = document.querySelector('[name=name]');
+    //verificar maxLength e Require
+    if(name.value.length > 40 || name.value.length === 0) {
+        alert('Nome inválido')
+    }
+} 
+
+window.onload = function () {
+    let button = document.querySelector('.submit-button');
+    button.addEventListener('click', handleSubmit);
+}
