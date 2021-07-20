@@ -15,4 +15,5 @@
   /* ADICIONE AQUI SEUS TESTES */
   flex-direction: row-reverse;
   flex-wrap: wrap;
+  flex-flow: unset;
 }
