@@ -15,4 +15,5 @@
   display: flex;
   flex-wrap: wrap;
   height: 600px;
+  align-content: space-around;
 }
