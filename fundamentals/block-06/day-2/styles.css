@@ -1,0 +1,16 @@
+.form-control {
+  width: 80%;
+}
+form {
+  border-width: 1px;
+  border: solid #dee2e6;
+  margin: 40px;
+  padding: 20px;
+}
+.form-select {
+  width: 80%;
+}
+.btn {
+  margin: 12px;
+  margin-left: -2px;
+}
