@@ -18,18 +18,26 @@ img {
 figure {
   margin: 30px;
 }
+figcaption {
+  font-size: .8em;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
 
 @media screen and (min-width: 800px) {
   body {
     background: rgba(0,0,255,.2);
-    margin: 25px 6%;
+    margin: 25px;
   }
   main {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
   }
   figure {
-    width: 45%;
-    margin-left: 2%;
+    width: 40%;
   }
 }
