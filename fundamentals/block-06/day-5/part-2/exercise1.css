@@ -1,21 +1,35 @@
 body {
   font: 1.2em/1.2 Helvetica, aria, sans-serif;
-  margin: 20px;
+  margin: 5px;
 }
+
 h1 {
   font-size: 1.8em;
 }
+
 h2 {
   font-size: 1.5em;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 figure {
-    margin: 30px;
+  margin: 30px;
 }
-@media screen and(min-width: 800px) {
-  
+
+@media screen and (min-width: 800px) {
+  body {
+    background: rgba(0,0,255,.2);
+    margin: 25px 6%;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  figure {
+    width: 45%;
+    margin-left: 2%;
+  }
 }
