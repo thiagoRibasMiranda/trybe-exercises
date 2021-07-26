@@ -1,0 +1,43 @@
+body {
+  font: 1.2em/1.2 Helvetica, aria, sans-serif;
+  margin: 5px;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 30px;
+}
+figcaption {
+  font-size: .8em;
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background: rgba(0,0,255,.2);
+    margin: 25px;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
+  figure {
+    width: 40%;
+  }
+}
