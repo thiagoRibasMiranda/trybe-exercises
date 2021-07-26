@@ -75,3 +75,13 @@ p strong {
     display: flex;
   }
 }
+@media (max-width: 650px) and (min-width: 950px) {
+  .card:nth-child(3) {
+    display: block;
+  }
+}
+@media (min-width: 950px) {
+  .card:nth-child(3) {
+    display: block;
+  }
+}
