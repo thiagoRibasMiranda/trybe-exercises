@@ -27,4 +27,9 @@ addNewKey(lesson2, 'turno', 'manhã');
 const listOfObjects = (obj) => {
   console.log(Object.keys(obj));
 }
-listOfObjects(lesson3)
+listOfObjects(lesson3);
+
+const lengthObjects = obj => {
+  console.log(Object.keys(obj).length);
+}
+lengthObjects(lesson1);
