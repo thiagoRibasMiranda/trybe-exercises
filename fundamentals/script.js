@@ -36,3 +36,7 @@ lengthObjects(lesson1);
 
 const listOfValues = obj => Object.values(obj);
 console.log(listOfValues(lesson2));
+
+let allLessons = {};
+Object.assign(allLessons, {lesson1, lesson2, lesson3});
+console.log(allLessons);
