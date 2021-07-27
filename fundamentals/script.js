@@ -23,3 +23,8 @@ const addNewKey = (obj, key, value) => {
   console.log(obj);
 };
 addNewKey(lesson2, 'turno', 'manhã');
+
+const listOfObjects = (obj) => {
+  console.log(Object.keys(obj));
+}
+listOfObjects(lesson3)
