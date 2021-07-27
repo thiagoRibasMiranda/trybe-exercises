@@ -17,3 +17,9 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
+
+const addNewKey = (obj, key, value) => {
+  obj[key] = value;
+  console.log(obj);
+};
+addNewKey(lesson2, 'turno', 'manhã');
