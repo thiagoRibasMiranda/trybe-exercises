@@ -33,3 +33,6 @@ const lengthObjects = obj => {
   console.log(Object.keys(obj).length);
 }
 lengthObjects(lesson1);
+
+const listOfValues = obj => Object.values(obj);
+console.log(listOfValues(lesson2));
