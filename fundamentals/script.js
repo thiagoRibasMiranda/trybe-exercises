@@ -50,3 +50,8 @@ const totalOfStudents = obj => {
   return total
 }
 console.log(totalOfStudents(allLessons));
+
+const valueOfKey = (obj, pos) => {
+  return Object.values(obj)[pos];
+}
+console.log(valueOfKey(lesson3, 1));
