@@ -9,3 +9,8 @@ function myFizzBuzz(num) {
 }
 
 // implemente seus testes aqui
+assert.deepStrictEqual(myFizzBuzz(15),'fizzbuzz');
+assert.deepStrictEqual(myFizzBuzz(6), 'fizz');
+assert.deepStrictEqual(myFizzBuzz(10), 'buzz');
+assert.deepStrictEqual(myFizzBuzz(13), 13);
+assert.deepStrictEqual(myFizzBuzz('f'), false);
