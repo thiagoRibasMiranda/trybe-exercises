@@ -1,6 +1,13 @@
 const assert = require('assert');
 // escreva a função wordLengths aqui
-
+let vazio = [];
+const wordLengths = array => {
+  for (let index = 0; index < array.length; index += 1) {
+    const element = array[index];
+    vazio.push(element.length);
+  }
+  return vazio;
+}
 const words = ['sun', 'potato', 'roundabout', 'pizza'];
 const expected = [3, 6, 10, 5];
 
