@@ -91,9 +91,10 @@ const expectedResult = [
     author: 'J. R. R. Tolkien',
   },
 ];
-
+// console.log(books.map((book) => `age: ${(2021 - book.author.birthYear)}, author: ${book.author.name}`).sort((book1, book2) => book1.age - book2.age));
 function nameAndAge() {
   // escreva seu código aqui
+  return books.map((book) => ({age: book.releaseYear - book.author.birthYear, author: book.author.name})).sort((book1, book2) => book1.age - book2.age);
 }
-
+console.log(nameAndAge());
 assert.deepStrictEqual(nameAndAge(), expectedResult);
