@@ -1,8 +1,8 @@
-const sum = (a,b) => {
+const sum2 = (a,b) => {
   if(typeof(a) != 'number' || typeof(b) != 'number') {
     throw new Error('parameters must be numbers');
   };
   return a + b;
 };
 
-module.exports = sum;
+module.exports = sum2;
