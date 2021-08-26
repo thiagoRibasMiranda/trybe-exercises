@@ -23,4 +23,19 @@ describe('Testa as funções encode e decode', () => {
     expect(encode('u')).toStrictEqual('5');
   });
 
+  it('decode converte o número 1 na vogal "a"', () => {
+    expect(decode('1')).toStrictEqual('a');
+  });
+  it('decode converte o número 2 na vogal "e"', () => {
+    expect(decode('2')).toStrictEqual('e');
+  });
+  it('decode converte o número 3 na vogal "i"', () => {
+    expect(decode('3')).toStrictEqual('i');
+  });
+  it('decode converte o número 4 na vogal "o"', () => {
+    expect(decode('4')).toStrictEqual('o');
+  });
+  it('decode converte o número 5 na vogal "u"', () => {
+    expect(decode('5')).toStrictEqual('u');
+  }); 
 });
