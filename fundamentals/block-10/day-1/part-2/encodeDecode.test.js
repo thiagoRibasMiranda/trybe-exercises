@@ -54,6 +54,9 @@ describe('Testa as funções encode e decode', () => {
   it('encode converte apenas a vogal "u" no número 5', () => {
     expect(encode('nu')).toStrictEqual('n5');
   });
+  it('encode retorna o mesmo números de caracteres', () => {
+    expect(encode('trybe').length).toStrictEqual(5);
+  });
 
   it('decode converte apenas o número 1 na vogal "a"', () => {
     expect(decode('1n1')).toStrictEqual('ana');
@@ -70,4 +73,8 @@ describe('Testa as funções encode e decode', () => {
   it('decode converte apenas o número 5 na vogal "u"', () => {
     expect(decode('n5')).toStrictEqual('nu');
   }); 
+
+  it('decode retorna o mesmo números de caracteres', () => {
+    expect(decode('tryb2').length).toStrictEqual(5);
+  });
 });
