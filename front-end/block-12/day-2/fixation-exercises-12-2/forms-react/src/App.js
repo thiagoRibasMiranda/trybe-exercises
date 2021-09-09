@@ -67,7 +67,7 @@ class App extends React.Component {
       
       <label>
         Gasolina:
-        <input type="checkbox" name="gasolina" checked={this.state.isChecked} onChange={this.handleInputChange}></input> <br/>
+        <input type="checkbox" name="isChecked" checked={this.state.isChecked} onChange={this.handleInputChange}></input> <br/>
       </label>
 
       <label>
