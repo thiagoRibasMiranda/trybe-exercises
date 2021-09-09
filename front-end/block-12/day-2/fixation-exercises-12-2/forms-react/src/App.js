@@ -1,6 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react'
+import Description from './Description';
+import ImputNumber from './InputNumber';
 
 class App extends React.Component {
   constructor(){
@@ -69,21 +71,23 @@ class App extends React.Component {
         </select> <br/>
       </label>
       
-      <label>
+      {/* <label>
         Ano:
         <input type="number" name="ano" value={this.state.ano} onChange={this.handleInputChange}></input> <br/>
-      </label>
+      </label> */}
+      <ImputNumber value={this.state.ano} handleInputChange={this.handleInputChange} />
       
       <label>
         Gasolina:
         <input type="checkbox" name="isChecked" checked={this.state.isChecked} onChange={this.handleInputChange}></input> <br />
       </label>
 
-      <label>
+      {/* <label>
         Descrição:
         <textarea name="descrição" value={this.state.descrição} onChange={this.handleInputChange}></textarea>
         <br />
-      </label>
+      </label> */}
+      <Description handleInputChange={this.handleInputChange} value={this.state.descrição}/>
       
       <label>
         Envie o arquivo:
