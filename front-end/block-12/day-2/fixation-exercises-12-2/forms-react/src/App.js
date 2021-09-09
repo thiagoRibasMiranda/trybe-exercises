@@ -11,6 +11,7 @@ class App extends React.Component {
     this.toggleChange = this.toggleChange.bind(this);
     this.handleChangeMarca = this.handleChangeMarca.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.fileInput = React.createRef();
 
     this.state = {
       descrição: '',
@@ -48,9 +49,16 @@ class App extends React.Component {
         [name] : value
       });
     }
+    handleSubmit(event) {
+      event.preventDefault();
+      alert(
+        `Selected file - ${this.fileInput.current.files[0].name}`
+      );
+    }
   render() {    
     return (
       <>
+      <form onSubmit={this.handleSubmit}> 
       <label>
         Marca:
         <select value={this.state.marca} onChange={this.handleInputChange}>
@@ -67,14 +75,20 @@ class App extends React.Component {
       
       <label>
         Gasolina:
-        <input type="checkbox" name="isChecked" checked={this.state.isChecked} onChange={this.handleInputChange}></input> <br/>
+        <input type="checkbox" name="isChecked" checked={this.state.isChecked} onChange={this.handleInputChange}></input> <br />
       </label>
 
       <label>
         Descrição:
         <textarea name="descrição" value={this.state.descrição} onChange={this.handleInputChange}></textarea>
+        <br />
       </label>
       
+      <label>
+        Envie o arquivo:
+        <input type="file" ref={this.fileInput}></input>
+      </label>
+      </form>
     </>
     )
     
