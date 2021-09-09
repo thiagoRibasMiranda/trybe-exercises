@@ -10,6 +10,7 @@ class App extends React.Component {
     this.handleChangeAno = this.handleChangeAno.bind(this);
     this.toggleChange = this.toggleChange.bind(this);
     this.handleChangeMarca = this.handleChangeMarca.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
 
     this.state = {
       descrição: '',
@@ -38,12 +39,21 @@ class App extends React.Component {
         marca: event.target.value,
       })
     }
+    handleInputChange(event) {
+      const target = event.target;
+      const value = target.type === 'checkbox' ? target.checked : target.value;
+      const name = target.name;
+
+      this.setState({
+        [name] : value
+      });
+    }
   render() {    
     return (
       <>
       <label>
         Marca:
-        <select value={this.state.marca} onChange={this.handleChangeMarca}>
+        <select value={this.state.marca} onChange={this.handleInputChange}>
           <option>Volvo</option>
           <option>Audi</option>
           <option>Mercedes</option>
@@ -52,17 +62,17 @@ class App extends React.Component {
       
       <label>
         Ano:
-        <input type="number" name="ano" value={this.state.ano} onChange={this.handleChangeAno}></input> <br/>
+        <input type="number" name="ano" value={this.state.ano} onChange={this.handleInputChange}></input> <br/>
       </label>
       
       <label>
         Gasolina:
-        <input type="checkbox" name="gasolina" checked={this.state.isChecked} onChange={this.toggleChange}></input> <br/>
+        <input type="checkbox" name="gasolina" checked={this.state.isChecked} onChange={this.handleInputChange}></input> <br/>
       </label>
 
       <label>
         Descrição:
-        <textarea name="descrição" value={this.state.descrição} onChange={this.handleChange}></textarea>
+        <textarea name="descrição" value={this.state.descrição} onChange={this.handleInputChange}></textarea>
       </label>
       
     </>
