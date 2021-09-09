@@ -59,6 +59,7 @@ class App extends React.Component {
     return (
       <>
       <form onSubmit={this.handleSubmit}> 
+      <fieldset>
       <label>
         Marca:
         <select value={this.state.marca} onChange={this.handleInputChange}>
@@ -88,6 +89,7 @@ class App extends React.Component {
         Envie o arquivo:
         <input type="file" ref={this.fileInput}></input>
       </label>
+      </fieldset>
       </form>
     </>
     )
