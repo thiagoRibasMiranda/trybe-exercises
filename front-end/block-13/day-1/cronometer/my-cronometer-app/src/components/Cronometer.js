@@ -12,7 +12,7 @@ class Cronometer extends React.Component {
   componentDidMount() {
     const ONE_SECOND = 1000;
 
-    setInterval(() => {
+    this.intervalID = setInterval(() => {
       this.setState((prevState) => ({
         seconds: prevState.seconds + 1,
       }));
@@ -24,6 +24,10 @@ class Cronometer extends React.Component {
     if(prevState.seconds === TIME_LIMIT){
       this.setState({ seconds: 0 })
     }
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.intervalID);
   }
 
   render() {
