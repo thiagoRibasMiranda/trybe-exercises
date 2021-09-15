@@ -19,6 +19,13 @@ class Cronometer extends React.Component {
     }, ONE_SECOND)
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    const TIME_LIMIT = 10;
+    if(prevState.seconds === TIME_LIMIT){
+      this.setState({ seconds: 0 })
+    }
+  }
+
   render() {
     const { seconds } = this.state;
     return(
