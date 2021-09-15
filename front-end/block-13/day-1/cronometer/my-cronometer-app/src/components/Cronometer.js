@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class Cronometer extends React.Component {
   constructor(props) {
     super(props);
@@ -7,6 +8,17 @@ class Cronometer extends React.Component {
       seconds: 0,
     } 
   }
+
+  componentDidMount() {
+    const ONE_SECOND = 1000;
+
+    setInterval(() => {
+      this.setState((prevState) => ({
+        seconds: prevState.seconds + 1,
+      }));
+    }, ONE_SECOND)
+  }
+
   render() {
     const { seconds } = this.state;
     return(
