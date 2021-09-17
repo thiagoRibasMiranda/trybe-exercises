@@ -6,7 +6,9 @@ class App extends React.Component {
     this.state = {
       api: '',     
       loading: true,
-      name: ''
+      name: '',
+      email: '',
+      age: ''
     };
     this.changeDataJson = this.changeDataJson.bind(this);
     // this.componentDidMount = this.componentDidMount.bind(this);
@@ -24,19 +26,29 @@ class App extends React.Component {
   }
   
   changeDataJson(dataJson) {
-    this.setState({ api: dataJson.results, name: dataJson.results[0].name.first })
+    this.setState({ 
+      api: dataJson.results[0], 
+      name: dataJson.results[0].name.first, 
+      email: dataJson.results[0].email,
+      age: dataJson.results[0].dob.age,
+      loading: false
+    })
+  }
+  shouldComponentUpdate(_nextProps, nextState) {
+    // console.log(nextState);
+    const idade = 50;
+    if (nextState.age > idade) {
+      return false;
+    }
+    return true;
   }
 
   render() {
-    // const { api, loading } = this.state;
-    // const name = api.name;
-    // const firstName = name.first;
+    const { name, loading, email, age } = this.state;
     return(
         <>
         <div>
-          {/* <h3>loading...</h3> */}
-          {/* <p>{ api.name.first }</p> */}
-          {/* { !loading ? <p>loading...</p> : <p> { name } </p>} */}
+          { loading ? <p>loading...</p> : <p> Nome: { name }, idade: { age }, email: { email } </p>}
         </div>
         </>
     )
