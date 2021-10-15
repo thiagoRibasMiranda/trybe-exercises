@@ -17,12 +17,27 @@ class App extends React.Component {
     })
   }
 
+  componentDidMount() {
+    this.fetchCharacters();
+  }
+  
   render() {
+    const { characters } = this.state;
     return (
       <div className="App">
         <h1>
           Rick and Morty Characters:
         </h1>
+        <div className="body">
+          {characters.map(({ name, image}) => {
+            return (
+              <div className="container" key={name}>
+                <h3>{name}</h3>
+                <img src={image} alt={name}></img>
+              </div>
+            )
+          })}
+        </div>
       </div>
     );
   }
