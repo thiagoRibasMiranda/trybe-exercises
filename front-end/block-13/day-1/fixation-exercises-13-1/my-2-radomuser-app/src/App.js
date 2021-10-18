@@ -27,14 +27,16 @@ class App extends React.Component {
       }
     );
   }
-  
+
   componentDidMount() {
     this.fetchApi();
   }
 
   render() {
+    const { loading } = this.state;
     return (
-      <div className="App">
+      <div>
+        { loading ? <p> Loading...</p> : <p>Resposta</p>}
       </div>
     );
   }
