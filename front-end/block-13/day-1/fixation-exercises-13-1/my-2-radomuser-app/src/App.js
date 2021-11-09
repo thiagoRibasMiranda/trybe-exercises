@@ -22,7 +22,11 @@ class App extends React.Component {
         const requestObject = await requestReturn.json();
         this.setState({
           loading: false,
-          userObj: requestObject
+          userObj: requestObject,
+          userName: requestObject.results[0].name.first,
+          userAge: requestObject.results[0].dob.age,
+          userEmail: requestObject.results[0].email,
+          userImg: requestObject.results[0].picture.medium,
         });
       }
     );
@@ -30,13 +34,21 @@ class App extends React.Component {
 
   componentDidMount() {
     this.fetchApi();
+  } 
+  
+  shouldComponentUpdate(_nextProps, nextState) {
+    // const { userAge } = this.state
+    if( nextState.userAge > 50) {
+      return false;
+    } return true;
   }
 
   render() {
-    const { loading } = this.state;
+    const { loading, userAge, userEmail, userImg, userName } = this.state;
     return (
       <div>
-        { loading ? <p> Loading...</p> : <p>Resposta</p>}
+        { loading ? <p> Loading...</p> : <p>{userName}, {userAge}, {userEmail}</p>}
+        { loading ? <p> Loading...</p> : <img src={userImg} alt={userName} />}
       </div>
     );
   }
