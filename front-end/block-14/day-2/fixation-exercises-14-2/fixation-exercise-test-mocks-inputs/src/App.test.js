@@ -12,9 +12,13 @@ it('fetches a joke', async () => {
     status: 200,
   };
 
-  global.fetch = jest.fn(() => Promise.resolve({
-    json: () => Promise.resolve(joke),
+  global.fetch = jest.fn(async () => ({
+    json: async () => joke
   }));
+
+  // global.fetch = jest.fn(() => Promise.resolve({
+  //   json: () => Promise.resolve(joke),
+  // }));
 
   render(<App />);
   const renderedJoke = await screen.findByText('Whiteboards ... are remarkable.');
