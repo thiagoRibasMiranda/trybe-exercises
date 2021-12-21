@@ -50,6 +50,7 @@ class App extends React.Component {
   }
 }
 export default App;
+//teste
 // // App.js
 // import React from 'react';
 // import './App.css';
