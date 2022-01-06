@@ -15,4 +15,11 @@ const meuReducer = (state = ESTADO_INICIAL, action) => {
   }
 }
 
-const store = Redux.createStore();
+document.getElementById('next').addEventListener('click', () => {
+  store.dispatch({ type: 'NEXT_COLOR' });
+});
+document.getElementById('previous').addEventListener('click', () => {
+  store.dispatch({ type: 'PREVIOUS_COLOR' });
+});
+
+const store = Redux.createStore(meuReducer);
