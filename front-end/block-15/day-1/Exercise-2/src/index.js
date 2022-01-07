@@ -28,3 +28,4 @@ const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
 
 const rootReducer = combineReducers({ meuPrimeiroReducer, meuSegundoReducer });
 
+const store = createStore(rootReducer);
