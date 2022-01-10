@@ -26,28 +26,46 @@ const meuPrimeiroReducer = (state = ESTADO_INICIAL_1, action) => {
 };
 
 const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
-  switch (action.type) {
-    case 'ALTERAR_SEGUNDO_NOME_E_SOBRENOME':
-      return {
-        ...state,
-        nome: action.nome,
-        sobrenome: action.sobrenome,
-      }
-    default:
-      return state;
-  }
+switch (action.type) {
+  case 'ALTERAR_SEGUNDO_NOME_E_SOBRENOME':
+    return {
+      ...state,
+      nome: action.nome,
+      sobrenome: action.sobrenome,
+    };
+  default:
+    return state;
+}
 };
 
-// const changeName = (nome) => ({
-//   type: "Change_Name",
-//   nome,
-// })
+const rootReducer = Redux.combineReducers({ meuPrimeiroReducer, meuSegundoReducer });
 
-// const changeSobreome = (nome) => ({
-//   type: "Change_Sobrenome",
-//   sobrenome,
-// })
+const store = Redux.createStore(rootReducer);
 
-const rootReducer = combineReducers({ meuPrimeiroReducer, meuSegundoReducer });
+const alterarPrimeiroNome = () => ({
+  type: 'ALTERAR_PRIMEIRO_NOME_E_SOBRENOME',
+  nome: 'Thiago',
+  sobrenome: 'Santana Oliveira',
+})
 
-const store = createStore(rootReducer);
+const alterarSegundoNome = () => ({
+  type: 'ALTERAR_SEGUNDO_NOME_E_SOBRENOME',
+  nome: 'Rodrigo',
+  sobrenome: 'Santos da Silva',
+})
+
+window.onload = () => {
+setTimeout(() => {
+  store.dispatch(alterarPrimeiroNome());
+  store.dispatch(alterarSegundoNome());
+}, 2000);
+};
+
+store.subscribe(() => {
+const { meuPrimeiroReducer, meuSegundoReducer } = store.getState();
+document.getElementById('nome-1').innerHTML = meuPrimeiroReducer.nome;
+document.getElementById('sobrenome-1').innerHTML = meuPrimeiroReducer.sobrenome;
+
+document.getElementById('nome-2').innerHTML = meuSegundoReducer.nome;
+document.getElementById('sobrenome-2').innerHTML = meuSegundoReducer.sobrenome;
+});
