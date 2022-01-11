@@ -1,6 +1,7 @@
 import { createStore, combineReducers } from 'redux';
 import rootReducer from '../reducers';
 
-const store = createStore(rootReducer);
-
+const extension = window.devToolsExtension() || ((f) => f);
+const store = createStore(rootReducer, extension);
+ 
 export default store;
