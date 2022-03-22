@@ -1,10 +1,13 @@
-// import logo from './logo.svg';
-// import './App.css';
+// src/App.js
+import React from 'react';
+import InputsList from './InputsList';
+import List from './List';
 
 function App() {
   return (
     <div>
-      <p>Teste</p>
+      <InputsList />
+      <List />
     </div>
   );
 }

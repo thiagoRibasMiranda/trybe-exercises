@@ -1,7 +1,14 @@
+// src/store/index.js
 import { createStore, combineReducers } from 'redux';
-import rootReducer from '../reducers';
+import listReducer from '../reducers';
 
-const extension = window.devToolsExtension() || ((f) => f);
-const store = createStore(rootReducer, extension);
- 
+const rootReducer = combineReducers({ listReducer });
+
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  // A linha acima não é obrigatória, serve apenas para visualizar
+  // a extensão "Redux Devtools", caso você tenha instalado.
+);
+
 export default store;
