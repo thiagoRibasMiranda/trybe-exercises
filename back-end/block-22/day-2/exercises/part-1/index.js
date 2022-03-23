@@ -13,6 +13,14 @@ function doMatch(a, b, c) {
   return promise;
 }
 
-doMatch(5, 5, 5)
-  .then(resolve => console.log(resolve))
+function getRandomNumber() {
+  return Math.floor(Math.random() * 100 + 1);
+}
+
+function callDoMatch() {
+  const randomNumbers = Array.from({ length: 3 }).map(getRandomNumber);
+
+  doMatch(...randomNumbers)
+  .then(result => console.log(result))
   .catch(error => console.log(error))
+}
