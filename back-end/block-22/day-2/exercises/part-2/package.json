@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "simpsons": "node index.js",
-    "getSimpsonId": "node getSimpsonId.js"
+    "getSimpsonId": "node getSimpsonId.js",
+    "filterSimpsons": "node filterSimpsons.js"
   },
   "author": "Thiago Ribas",
   "license": "ISC"
