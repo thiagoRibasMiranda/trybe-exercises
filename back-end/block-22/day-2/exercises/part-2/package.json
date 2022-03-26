@@ -1,0 +1,17 @@
+{
+  "name": "part-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "simpsons": "node index.js",
+    "getSimpsonId": "node getSimpsonId.js",
+    "filterSimpsons": "node filterSimpsons.js",
+    "createSimpsonsFamily": "node createSimpsonsFamily.js",
+    "addNelsonToFamily": "node addNelsonToFamily.js",
+    "replaceNelson": "node replaceNelson.js"
+  },
+  "author": "Thiago Ribas",
+  "license": "ISC"
+}
