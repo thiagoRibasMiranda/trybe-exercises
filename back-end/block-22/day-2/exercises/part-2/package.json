@@ -9,7 +9,8 @@
     "getSimpsonId": "node getSimpsonId.js",
     "filterSimpsons": "node filterSimpsons.js",
     "createSimpsonsFamily": "node createSimpsonsFamily.js",
-    "addNelsonToFamily": "node addNelsonToFamily.js"
+    "addNelsonToFamily": "node addNelsonToFamily.js",
+    "replaceNelson": "node replaceNelson.js"
   },
   "author": "Thiago Ribas",
   "license": "ISC"
