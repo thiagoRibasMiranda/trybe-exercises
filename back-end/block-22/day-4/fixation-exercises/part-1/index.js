@@ -1,8 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const authMiddleware = require('./auth-middleware');
 
 const app = express();
 app.use(bodyParser.json());
+
+app.get('/open', function (req, res) {
+  res.send('open!')
+});
+
+app.use(authMiddleware);
 
 const recipes = [
   { id: 1, name: 'Lasanha', price: 40.0, waitTime: 30 },
@@ -12,10 +19,7 @@ const recipes = [
 
 function validatePrice(req, res, next) {
   const { price } = req.body;
-  const convertPrice = parseInt(price);
-  console.log(typeof convertPrice);
-  
-  if( !price || (typeof convertPrice != 'number') || convertPrice < 0) return res.status(400).json({ message: 'Invalid price!'});
+  if( !price || (price != 'number') || price < 0) return res.status(400).json({ message: 'Invalid price!'});
   
   next();
 };
