@@ -24,7 +24,8 @@ app.get('/simpsons/:id', async (req, res) => {
 app.post('/simpsons', async (req, res) => {
   const { id, name } = req.body;
   const simpsons = await getSimpsons();
-  if(!simpsons.find((s) => s.id === id)) res.status(409).json({message: 'id already exists'});
+  const simpson = simpsons.filter((s) => s.id === id);
+  if(simpson.length > 0) return res.status(409).json({message: 'id already exists'});
   simpsons.push({id, name});
   await setSimpsons(simpsons);
   res.status(204).end();
