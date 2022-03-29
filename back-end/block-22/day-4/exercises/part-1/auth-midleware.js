@@ -3,7 +3,6 @@ const authMiddleware = (req, res, next) => {
   const re = /\S+@\S+\.\S+/;
   if( !re.test(email) ) return res.status(400).json({ "message": "invalid data" });
   if( password.length < 4 || password > 8) return res.status(400).json({ "message": "invalid data" });
-  res.status(201).json({ "message": "user created" });
   next();
 }
 
