@@ -47,8 +47,25 @@ router.post('/:id', async (req, res) => {
     console.log(updateBook); // confira o que é retornado quando o book com o id é ou não encontrado;
 
     if(!updateBook) return res.status(404).json({ message: 'Livro não encontrado' });
-    
+
     return res.status(200).json({ message: 'Livro atualizado com sucesso!' })
+  } catch (e) {
+    console.log(e.message);
+    res.status(500).json({ message: 'Algo deu errado' });
+  }
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    const deleteBook = await Book.destroy(
+      { where: { id } },
+    );
+
+    console.log(deleteBook); // confira o que é retornado quando o book com o id é ou não encontrado;
+    
+    return res.status(200).json({ message: 'Livro deletado com sucesso!' })
   } catch (e) {
     console.log(e.message);
     res.status(500).json({ message: 'Algo deu errado' });
