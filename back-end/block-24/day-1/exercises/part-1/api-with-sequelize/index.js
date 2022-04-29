@@ -1,11 +1,13 @@
-// const express = require('express');
-// const bodyParser = require('body-parser');
+const express = require('express');
+const bodyParser = require('body-parser');
 
-// const app = express();
-// const PORT = process.env.PORT || 3000;
+const booksController = require('./controllers/booksController')
 
-// app.use(bodyParser.json());
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-// app.use('/book', bookController);
+app.use(bodyParser.json());
 
-// app.listen(PORT, () => console.log(`Ouvindo n aporta ${PORT}!`));
+app.use('/book', booksController);
+
+app.listen(PORT, () => console.log(`Ouvindo n aporta ${PORT}!`));
