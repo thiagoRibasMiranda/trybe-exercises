@@ -34,4 +34,25 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.post('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { title, author, pageQuantity } = req.body;
+
+    const [updateBook] = await Book.update(
+      { title, author, pageQuantity },
+      { where: { id } },
+    );
+
+    console.log(updateBook); // confira o que é retornado quando o book com o id é ou não encontrado;
+
+    if(!updateBook) return res.status(404).json({ message: 'Livro não encontrado' });
+    
+    return res.status(200).json({ message: 'Livro atualizado com sucesso!' })
+  } catch (e) {
+    console.log(e.message);
+    res.status(500).json({ message: 'Algo deu errado' });
+  }
+});
+
 module.exports = router;
