@@ -11,3 +11,13 @@ gaules.examsGrades = [41, 44, 42, 45];
 gaules.worksGrades = [44, 45];
 console.log(casimiro);
 console.log(gaules);
+const testInterfaceEmployee = {
+    registration: 'casicb124512598',
+    salary: 3000,
+    admissionDate: new Date(),
+    generateRegistration() {
+        const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
+        return `FNC${randomStr}`;
+    }
+};
+console.log(testInterfaceEmployee);
