@@ -5,6 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const Person_1 = __importDefault(require("./Person"));
 const Student_1 = __importDefault(require("./Student"));
+const Subject_1 = __importDefault(require("./Subject"));
 const casimiro = new Person_1.default('Casimiro', new Date('1980/01/25'));
 const gaules = new Student_1.default('Gau', new Date('1944/04/04'));
 gaules.examsGrades = [41, 44, 42, 45];
@@ -21,3 +22,5 @@ const testInterfaceEmployee = {
     }
 };
 console.log(testInterfaceEmployee);
+const math = new Subject_1.default('Matemática');
+console.log(math);
